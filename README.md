@@ -1,85 +1,19 @@
-# 🛡️ Digital Security Analysis
+# Digital Security Analysis
 
-Plataforma de análisis y monitoreo de eventos de ciberseguridad desarrollada con **Python**, **Streamlit** y **MySQL**, diseñada para centralizar, visualizar y analizar información relacionada con actividades de usuarios, eventos de seguridad, anomalías y niveles de riesgo dentro de un entorno digital.
+Digital Security Analysis es una aplicación web desarrollada con Streamlit para el análisis y monitoreo de eventos de ciberseguridad almacenados en una base de datos MySQL. La plataforma permite visualizar indicadores clave, monitorear actividades registradas, analizar anomalías y explorar información relacionada con riesgos de seguridad mediante dashboards interactivos.
 
-La solución permite a los analistas explorar grandes volúmenes de información mediante dashboards interactivos, facilitando la identificación de comportamientos sospechosos y apoyando la toma de decisiones basada en datos.
+## Tecnologías utilizadas
 
----
+- Python
+- Streamlit
+- Pandas
+- Plotly
+- SQLAlchemy
+- PyMySQL
+- MySQL
+- Google Cloud SQL
 
-# 📖 Descripción del Proyecto
-
-Digital Security Analysis es una aplicación web orientada al análisis de datos de ciberseguridad, construida sobre una arquitectura de visualización con Streamlit y una base de datos MySQL.
-
-El proyecto integra procesos de almacenamiento, consulta y visualización de información relacionada con:
-
-- Actividades de usuarios.
-- Eventos de seguridad.
-- Acciones realizadas dentro del sistema.
-- Detección y clasificación de anomalías.
-- Evaluación de riesgos.
-- Exploración de registros históricos.
-
-La plataforma proporciona una interfaz intuitiva para el monitoreo y análisis de indicadores clave de seguridad.
-
----
-
-# 🎯 Objetivos
-
-- Centralizar la información de eventos de seguridad.
-- Facilitar el monitoreo continuo de actividades registradas.
-- Identificar patrones anómalos dentro de los datos.
-- Apoyar la evaluación de riesgos mediante indicadores visuales.
-- Proporcionar capacidades de análisis exploratorio para investigadores y analistas.
-- Servir como base para futuras implementaciones de detección automática de amenazas mediante Inteligencia Artificial y Machine Learning.
-
----
-
-# 🏗️ Arquitectura General
-
-```text
-Eventos y Registros de Seguridad
-                │
-                ▼
-          Base de Datos
-              MySQL
-                │
-                ▼
-          database.py
-                │
-                ▼
-        Consultas SQL
-                │
-                ▼
-             Pandas
-                │
-                ▼
-            Streamlit
-                │
- ┌──────────────┼──────────────┐
- ▼              ▼              ▼
-Resumen     Monitoreo     Anomalías
- ▼              ▼              ▼
-Riesgo      Explorador de Datos
-```
-
----
-
-# 🛠️ Tecnologías Utilizadas
-
-| Tecnología | Descripción |
-|------------|-------------|
-| Python | Lenguaje principal de desarrollo |
-| Streamlit | Framework para dashboards interactivos |
-| Pandas | Manipulación y análisis de datos |
-| SQLAlchemy | Conexión y gestión de base de datos |
-| PyMySQL | Conector MySQL para Python |
-| Plotly | Visualización interactiva |
-| MySQL | Sistema gestor de bases de datos |
-| Google Cloud SQL | Servicio de base de datos administrada |
-
----
-
-# 📂 Estructura del Proyecto
+## Estructura del proyecto
 
 ```text
 digital-security-analysis-/
@@ -105,107 +39,37 @@ digital-security-analysis-/
             └── 05_Explorador.py
 ```
 
----
+## Módulos
 
-# 📋 Descripción de los Componentes
+### Resumen
 
-## app.py
+Presenta una vista general de los principales indicadores de seguridad obtenidos desde la base de datos.
 
-Archivo principal de la aplicación Streamlit.
+### Monitoreo
 
-Responsable de:
+Permite consultar y visualizar eventos registrados para realizar seguimiento a la actividad del sistema.
 
-- Inicializar la aplicación.
-- Configurar la interfaz principal.
-- Gestionar la navegación entre páginas.
-- Centralizar la experiencia de usuario.
+### Anomalías
 
----
+Muestra información relacionada con eventos clasificados como anómalos para facilitar su análisis.
 
-## database.py
+### Riesgo
 
-Módulo encargado de la conexión con la base de datos.
+Proporciona una vista enfocada en la evaluación y priorización de riesgos identificados.
 
-Responsabilidades:
+### Explorador
 
-- Crear la conexión a MySQL.
-- Ejecutar consultas SQL.
-- Obtener información para los dashboards.
-- Gestionar la comunicación entre Streamlit y la base de datos.
+Permite navegar y consultar los datos almacenados mediante filtros y visualizaciones interactivas.
 
----
+## Instalación
 
-## pages/01_Resumen.py
-
-Dashboard ejecutivo con indicadores generales de seguridad.
-
-Permite:
-
-- Visualizar métricas globales.
-- Consultar indicadores clave.
-- Obtener una visión general del estado del sistema.
-
----
-
-## pages/02_Monitoreo.py
-
-Módulo enfocado en el seguimiento de eventos de seguridad.
-
-Permite:
-
-- Supervisar actividades registradas.
-- Analizar eventos recientes.
-- Identificar comportamientos potencialmente sospechosos.
-
----
-
-## pages/03_Anomalias.py
-
-Módulo de análisis de anomalías.
-
-Permite:
-
-- Visualizar eventos clasificados como anómalos.
-- Analizar tendencias y patrones.
-- Facilitar investigaciones de posibles incidentes.
-
----
-
-## pages/04_Riesgo.py
-
-Módulo de evaluación de riesgo.
-
-Permite:
-
-- Analizar niveles de riesgo asociados a eventos.
-- Priorizar incidentes.
-- Apoyar procesos de toma de decisiones.
-
----
-
-## pages/05_Explorador.py
-
-Herramienta de exploración y consulta de datos.
-
-Permite:
-
-- Navegar registros históricos.
-- Aplicar filtros y búsquedas.
-- Realizar análisis exploratorios.
-
----
-
-# ⚙️ Instalación
-
-## 1. Clonar el repositorio
+Clonar el repositorio:
 
 ```bash
 git clone https://github.com/StefanyLA23/digital-security-analysis-.git
 ```
 
----
-
-## 2. Acceder al proyecto Streamlit
+Ingresar a la aplicación:
 
 ```bash
 cd digital-security-analysis-
@@ -213,67 +77,53 @@ cd streamlit
 cd streamlit
 ```
 
-O directamente:
-
-```bash
-cd digital-security-analysis-/streamlit/streamlit
-```
-
----
-
-## 3. Crear entorno virtual
-
-### Windows
+Crear un entorno virtual:
 
 ```bash
 python -m venv venv
+```
+
+Activar el entorno:
+
+**Windows**
+
+```bash
 venv\Scripts\activate
 ```
 
-### Linux / Mac
+**Linux / Mac**
 
 ```bash
-python -m venv venv
 source venv/bin/activate
 ```
 
----
-
-## 4. Instalar dependencias
+Instalar dependencias:
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
+## Configuración
 
-# 🔐 Configuración
-
-La aplicación utiliza un archivo de configuración para almacenar las credenciales de acceso a la base de datos.
-
-Ubicación:
+Crear o actualizar el archivo:
 
 ```text
 .streamlit/secrets.toml
 ```
 
-Ejemplo:
+Con las credenciales de conexión a la base de datos:
 
 ```toml
 DB_USER = "usuario"
 DB_PASSWORD = "contraseña"
 DB_HOST = "host"
 DB_PORT = "3306"
-DB_NAME = "digital_security"
+DB_NAME = "nombre_base_datos"
 ```
 
-> Se recomienda no publicar este archivo en el repositorio para proteger las credenciales.
+## Ejecución
 
----
-
-# 🚀 Ejecución
-
-Una vez configuradas las dependencias y credenciales, ejecutar:
+Desde la carpeta donde se encuentra `app.py`:
 
 ```bash
 streamlit run app.py
@@ -285,39 +135,6 @@ La aplicación estará disponible en:
 http://localhost:8501
 ```
 
----
+## Base de datos
 
-# 🗄️ Base de Datos
-
-La plataforma utiliza MySQL como sistema gestor de bases de datos para almacenar y consultar información relacionada con:
-
-- Usuarios.
-- Eventos de seguridad.
-- Registros de actividad.
-- Acciones realizadas.
-- Anomalías detectadas.
-- Evaluaciones de riesgo.
-
-La capa de acceso a datos se encuentra centralizada en el archivo:
-
-```text
-database.py
-```
-
----
-
-# 📊 Funcionalidades Principales
-
-✅ Dashboard ejecutivo de seguridad.
-
-✅ Monitoreo de eventos.
-
-✅ Visualización de anomalías.
-
-✅ Evaluación de riesgos.
-
-✅ Exploración interactiva de datos.
-
-✅ Consultas a base de datos en tiempo real.
-
-✅ Visualizaciones analíticas.
+La aplicación utiliza MySQL como fuente principal de información. La conexión y las consultas necesarias para alimentar los dashboards se gestionan desde el archivo `database.py`.
