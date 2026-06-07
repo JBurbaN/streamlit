@@ -1,4 +1,4 @@
-# Digital Security Analysis
+# Digital Security Analysis 
 
 Digital Security Analysis es una aplicación web desarrollada con Streamlit para el análisis y monitoreo de eventos de ciberseguridad almacenados en una base de datos MySQL. La plataforma permite visualizar indicadores clave, monitorear actividades registradas, analizar anomalías y explorar información relacionada con riesgos de seguridad mediante dashboards interactivos.
 
